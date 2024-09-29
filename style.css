@@ -1,0 +1,168 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    color: white;
+    background-color: black;
+}
+.hr {
+    width:  50px;
+    height: inherit;
+}
+nav {
+    background-color: #000000;
+    padding: 10px;
+    text-align: center;
+}
+
+nav ul {
+    list-style: none;
+}
+
+nav ul li {
+    display: inline;
+    margin: 0 15px;
+}
+
+nav a {
+    color: white;
+    text-decoration: none;
+}
+
+.home-header {
+    background-image: url('images/home.jpg');
+ background-size: cover; /*Ensures the image covers the entire area */
+background-position: center; /* Centers the image */
+background-repeat: no-repeat; /* Prevents the image from repeating */
+height: 100vh; /* Sets the height of the element */
+/* width: 100vh; Sets the width of the element */
+display: flex;
+flex-direction: column;
+justify-content: center;
+align-items: center;
+text-align: center;
+  
+}
+
+.home-header .content h1 {
+    font-size: 50px;
+    font-weight: bold;
+}
+
+.social-icons {
+    margin-top: 20px;
+}
+
+.social-icons img {
+    width: 40px;
+    margin: 0 10px;
+}
+
+.about-container {
+    display: flex;
+    height: 100vh;
+}
+
+.about-image {
+    flex: 1;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.about-image img {
+    max-width: 100%;
+    height: auto;
+}
+
+.about-bio {
+    flex: 1;
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.gallery-section {
+    padding: 20px;
+}
+
+.gallery-section h2 {
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+.gallery {
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.gallery-item {
+    position: relative;
+    margin:  10px;
+    cursor: pointer;
+}
+
+.gallery-item img {
+    width: 150px; /* Thumbnail size */
+    height: auto;
+    transition: transform 0.3s ease;
+}
+
+.gallery-item img:hover {
+    transform: scale(1.05); /* Slight zoom on hover */
+}
+
+/* Overlapping effect */
+.gallery-item:nth-child(2) {
+    margin-left: -50px; /* Adjust this for overlap effect */
+}
+
+.gallery-item:nth-child(3) {
+    margin-left: -50px; /* Adjust this for overlap effect */
+}
+.gallery-item:nth-child(5) {
+    margin-left: -50px; /* Adjust this for overlap effect */
+}
+.gallery-item:nth-child(6) {
+    margin-left: -50px; /* Adjust this for overlap effect */
+}
+.gallery-item:nth-child(7) {
+    margin-left: -50px; /* Adjust this for overlap effect */
+}
+.gallery-item:nth-child(4) {
+    margin-left: -50px; /* Adjust this for overlap effect */
+}
+
+.lightbox {
+    display: none; /* Hidden by default */
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.8); /* Semi-transparent background */
+    justify-content: center;
+    align-items: center;
+    z-index: 1000; /* Ensure it is on top */
+}
+
+.lightbox img {
+    max-width: 90%;
+    max-height: 90%;
+}
+
+.close {
+    position: absolute;
+    top: 20px;
+    right: 30px;
+    color: white;
+    font-size: 30px;
+    cursor: pointer;
+}
