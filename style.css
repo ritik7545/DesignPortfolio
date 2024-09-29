@@ -87,59 +87,48 @@ text-align: center;
     justify-content: center;
 }
 
-.gallery-section {
-    padding: 20px;
-}
+/* section of gallery */
 
 .gallery-section h2 {
     text-align: center;
-    margin-bottom: 20px;
+    margin-bottom: 40px;
 }
 
 .gallery {
     position: relative;
     display: flex;
+    margin-bottom: 30px;
     justify-content: center;
-    align-items: center;
+    align-items: flex-start; /* Align items at the top */
+    flex-wrap: nowrap; /* Prevent wrapping */
+    overflow: hidden; /* Hide overflow to prevent images from moving down */
 }
 
 .gallery-item {
     position: relative;
-    margin:  10px;
+    margin: 0; /* Reset margin */
     cursor: pointer;
+    transition: transform 0.5s ease; /* Smooth transition for movement */
+    z-index: 1; /* Default z-index */
 }
 
 .gallery-item img {
     width: 150px; /* Thumbnail size */
-    height: auto;
-    transition: transform 0.3s ease;
+    height: auto; /* Maintain aspect ratio */
+    transition: transform 0.5s ease; /* Smooth scaling transition */
 }
 
-.gallery-item img:hover {
-    transform: scale(1.05); /* Slight zoom on hover */
+.gallery-item:hover img {
+    transform: scale(1.05); /* Scale image on hover */
+    z-index: 10; /* Bring hovered image to front */
 }
 
-/* Overlapping effect */
-.gallery-item:nth-child(2) {
-    margin-left: -50px; /* Adjust this for overlap effect */
+/* Overlapping effect using negative margins */
+.gallery-item {
+    margin-left: -100px; /* Adjust this value for overlap */
 }
 
-.gallery-item:nth-child(3) {
-    margin-left: -50px; /* Adjust this for overlap effect */
-}
-.gallery-item:nth-child(5) {
-    margin-left: -50px; /* Adjust this for overlap effect */
-}
-.gallery-item:nth-child(6) {
-    margin-left: -50px; /* Adjust this for overlap effect */
-}
-.gallery-item:nth-child(7) {
-    margin-left: -50px; /* Adjust this for overlap effect */
-}
-.gallery-item:nth-child(4) {
-    margin-left: -50px; /* Adjust this for overlap effect */
-}
-
+/* Lightbox Styles */
 .lightbox {
     display: none; /* Hidden by default */
     position: fixed;
