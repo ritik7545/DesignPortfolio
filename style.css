@@ -9,10 +9,8 @@ body {
     color: white;
     background-color: black;
 }
-.hr {
-    width:  50px;
-    height: inherit;
-}
+
+
 nav {
     background-color: #000000;
     padding: 10px;
@@ -34,8 +32,8 @@ nav a {
 }
 
 .home-header {
-    background-image: url('images/home.jpg');
- background-size: cover; /*Ensures the image covers the entire area */
+background-image: url('images/home.jpg');
+background-size: cover; /*Ensures the image covers the entire area */
 background-position: center; /* Centers the image */
 background-repeat: no-repeat; /* Prevents the image from repeating */
 height: 100vh; /* Sets the height of the element */
@@ -46,7 +44,9 @@ flex-direction: column;
 justify-content: center;
 align-items: center;
 text-align: center;
-  
+}
+.home-header .content{
+    width: 100%;
 }
 
 .home-header .content h1 {
@@ -63,29 +63,63 @@ text-align: center;
     margin: 1px 1px;
 }
 
+/* .about-container {
+    display: flex;
+    height: 100%;
+    margin: auto;
+    padding: 0%;
+} */
+
 .about-container {
-    display: flex;
-    height: 100vh;
-}
-
-.about-image {
-    flex: 1;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-}
-
-.about-image img {
-    max-width: 100%;
-    height: auto;
+    width: 100%;
+    padding: 20px;
+    box-sizing: border-box;
+    margin-top:50px ;
 }
 
 .about-bio {
-    flex: 1;
+    max-width: 800px; /* Adjust width as needed */
+    margin: 0 auto;
     padding: 20px;
-    display: flex;
+    background-color: #0f0e0e;
+    border-radius: 8px;
+}
+
+.about-bio pre {
+    white-space: pre-wrap; /* Ensure the text wraps */
+    word-wrap: break-word; /* Break long words if necessary */
+    margin: 0;
+    padding: 10px;
+    background-color: #0c0c0c; /* Optional background */
+    border-radius: 5px;
+    /* font-family: 'Courier New', monospace; */
+}
+
+nav ul {
+    list-style: none;
+    padding: 0;
+}
+
+nav ul li {
+    display: inline;
+    margin-right: 15px;
+}
+
+nav ul li a {
+    text-decoration: none;
+    color: #f7f6f6;
+}
+
+
+
+.about-bio {
+    flex: 1;
+    padding: 60px;
+    display: flex
+;
     flex-direction: column;
     justify-content: center;
+    margin: auto;
 }
 
 /* section of gallery */
