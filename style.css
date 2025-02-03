@@ -155,3 +155,27 @@ text-align: center;
     font-size: 30px;
     cursor: pointer;
 }
+
+@media (max-width: 768px) {
+    .about-container {
+        flex-direction: column;
+    }
+    .social-icons img {
+        width: 30px;
+    }
+    .gallery {
+        flex-wrap: wrap;
+    }
+}
+.gallery-item {
+    transition: transform 0.3s ease;
+}
+
+
+.home-header {
+    background: rgba(0, 0, 0, 0.5); /* Adds a black overlay */
+}
+
+.gallery-item:hover {
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+}
