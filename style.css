@@ -39,7 +39,8 @@ nav a {
 background-position: center; /* Centers the image */
 background-repeat: no-repeat; /* Prevents the image from repeating */
 height: 100vh; /* Sets the height of the element */
-/* width: 100vh; Sets the width of the element */
+width: 100%; 
+/* height: 50%; */
 display: flex;
 flex-direction: column;
 justify-content: center;
@@ -59,7 +60,7 @@ text-align: center;
 
 .social-icons img {
     width: 40px;
-    margin: 0 10px;
+    margin: 1px 1px;
 }
 
 .about-container {
